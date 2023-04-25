@@ -5,6 +5,14 @@ import { HiOutlineBellAlert } from "react-icons/hi2";
 import { useState } from "react";
 import Modal from "./components/Modal";
 import Modal2 from "./components/Modal2";
+import SelectBox from "./components/Selectbox";
+
+const OPTIONS = [
+  { id: 1, value: "react", name: "리엑트" },
+  { id: 2, value: "java", name: "자바" },
+  { id: 3, value: "spring", name: "스프링" },
+  { id: 4, value: "reactnative", name: "리엑트네이티브" },
+];
 
 const Buttons = styled.button`
   display: flex;
@@ -183,6 +191,7 @@ function App() {
       <div>
         <h2>Select</h2>
         <div className="selectcontainer">
+          <SelectBox options={OPTIONS} defaultValue="react"></SelectBox>
           {/* dropbtn USD< 자리에 {useState}가 들어가서 하단 버튼onclick -> useState 바뀌면됨*/}
         </div>
       </div>
